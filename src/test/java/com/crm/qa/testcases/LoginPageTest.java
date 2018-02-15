@@ -1,8 +1,10 @@
 package com.crm.qa.testcases;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -29,6 +31,7 @@ public class LoginPageTest extends TestBase {
 
 	
 	@Test(priority=1)
+	@Parameters({ "browser", "username" })
 	public void crmLogoTest() {
 		boolean flag = loginpage.validedCrmLogo();
 		Assert.assertTrue(flag);
@@ -37,6 +40,7 @@ public class LoginPageTest extends TestBase {
 	@Test(priority=2)
 	public void loginTest() {
 		homePage = loginpage.validedLogin(prop.getProperty("username"), prop.getProperty("password"));
+		throw new SkipException("Skip");
 	}
 	
 	@Test(priority=3)

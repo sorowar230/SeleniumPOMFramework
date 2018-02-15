@@ -7,6 +7,7 @@
 	</listeners> 
 
 	<test name="Free CRM App Test Cases">
+	<parameter name="browser" value="FF"></parameter>
 		<classes>
 			<class name="com.crm.qa.testcases.LoginPageTest"></class>
 			<class name="com.crm.qa.testcases.HomePageTest"></class>

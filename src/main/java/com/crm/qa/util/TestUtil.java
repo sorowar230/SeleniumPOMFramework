@@ -34,6 +34,7 @@ public class TestUtil extends TestBase {
 	
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
+		//System.gc();
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
 		} catch (FileNotFoundException e) {
