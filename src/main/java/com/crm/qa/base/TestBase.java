@@ -20,14 +20,14 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public  static EventFiringWebDriver e_driver;
+	public  static EventFiringWebDriver  e_driver;
 	public static WebEventListener eventListener;
 	
 	public TestBase() {
 		
 		try {
 				prop = new Properties();
-				FileInputStream ip = new FileInputStream("http://18.222.92.134:8080/job/FreeCRMTestGit/ws/src/main/java/com/crm/qa/config/config.properties");
+				FileInputStream ip = new FileInputStream("/var/lib/jenkins/workspace/FreeCRMTestGit/src/main/java/com/crm/qa/config/config.properties");
 				prop.load(ip);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
