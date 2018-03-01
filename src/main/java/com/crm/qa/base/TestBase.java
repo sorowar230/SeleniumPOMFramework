@@ -41,7 +41,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/FreeCRMTestGit/drivers/chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/FreeCRMTestGit/drivers/chromedriver");	
 			driver = new ChromeDriver(); 
 		}else if(browserName.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", "/var/lib/jenkins/workspace/FreeCRMTestGit/drivers/geckodriver.exe");	
