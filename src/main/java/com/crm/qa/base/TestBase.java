@@ -27,7 +27,7 @@ public class TestBase {
 		
 		try {
 				prop = new Properties();
-				FileInputStream ip = new FileInputStream("..\\SeleniumPOMFramework\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+				FileInputStream ip = new FileInputStream("C:\\Program Files (x86)\\Jenkins\\workspace\\FreeCrmTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 				prop.load(ip);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -41,10 +41,10 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "..\\SeleniumPOMFramework\\drivers\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Jenkins\\workspace\\FreeCrmTest\\drivers\\chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}else if(browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", "..\\SeleniumPOMFramework\\drivers\\geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver", "C:\\Program Files (x86)\\Jenkins\\workspace\\FreeCrmTest\\drivers\\geckodriver.exe");	
 			driver = new FirefoxDriver();
 		}
 		
